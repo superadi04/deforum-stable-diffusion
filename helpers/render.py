@@ -45,6 +45,9 @@ def convert_image_to_8bpc(image, bit_depth_output):
 
 # This function saves the image to file, depending on bitrate. At 8bpc PIL saves png8 images. At 16bpc, numpngw saves png16 images. At 32 bpc, cv2 saves EXR images (and optionally tifffile saves 32bpc tiffs).
 def save_8_16_or_32bpc_image(image, outdir, filename, bit_depth_output): 
+    print(outdir)
+    print(filename)
+    print("HEY")
     if bit_depth_output == 8: 
         image.save(os.path.join(outdir, filename))
     elif bit_depth_output == 32:
