@@ -59,8 +59,8 @@ def make_mp4_ffmpeg(ffmpeg_args, display_ffmpeg=False, debug=False):
         ffmpeg_args.ffmpeg_mp4_path
     ]
 
-    # if debug:
-    #     print(cmd)
+    if debug:
+        print(cmd)
 
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
