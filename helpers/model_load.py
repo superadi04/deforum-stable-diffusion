@@ -69,7 +69,7 @@ def download_model(model_map,root):
 
 
 #@profile
-def load_model(root, load_on_run_all=True, check_sha256=True, map_location="cuda"):
+def load_model(root, load_on_run_all=True, check_sha256=True, map_location="cpu"):
 
     import torch
     from ldm.util import instantiate_from_config
@@ -220,7 +220,7 @@ def load_model(root, load_on_run_all=True, check_sha256=True, map_location="cuda
         except:
             print("..could not verify model integrity")
 
-    def load_model_from_config(config, ckpt, verbose=False, device='cuda', print_flag=False, map_location="cuda"):
+    def load_model_from_config(config, ckpt, verbose=False, device='cpu', print_flag=False, map_location="cpu"):
         print(f"..loading model")
         _ , extension = os.path.splitext(ckpt)
         if extension.lower() == ".safetensors":
