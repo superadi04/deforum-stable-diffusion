@@ -223,10 +223,10 @@ def render_animation(root, anim_args, args, cond_prompts, uncond_prompts):
     print(f"Saving animation frames to {args.outdir}")
 
     # save settings for the batch
-    settings_filename = os.path.join(args.outdir, f"{args.timestring}_settings.txt")
-    with open(settings_filename, "w+", encoding="utf-8") as f:
-        s = {**dict(args.__dict__), **dict(anim_args.__dict__)}
-        json.dump(s, f, ensure_ascii=False, indent=4)
+    # settings_filename = os.path.join(args.outdir, f"{args.timestring}_settings.txt")
+    # with open(settings_filename, "w+", encoding="utf-8") as f:
+    #     s = {**dict(args.__dict__), **dict(anim_args.__dict__)}
+    #     json.dump(s, f, ensure_ascii=False, indent=4)
         
     # resume from timestring
     if anim_args.resume_from_timestring:
