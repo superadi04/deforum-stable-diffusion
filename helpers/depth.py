@@ -84,7 +84,7 @@ class DepthModel():
         if not os.path.exists(os.path.join(models_path,'AdaBins_nyu.pt')):
             print("..downloading AdaBins_nyu.pt")
             os.makedirs(models_path, exist_ok=True)
-            download_file("https://huggingface.co/deforum/AdaBins/resolve/main/AdaBins_nyu.pt", models_path)
+            download_file("https://drive.google.com/uc?id=1lvyZZbC9NLcS8a__YPcUP7rDiIpbRpoF", models_path)
         self.adabins_helper = InferenceHelper(models_path, dataset='nyu', device=self.device)
 
     def load_midas(self, models_path, half_precision=True):
