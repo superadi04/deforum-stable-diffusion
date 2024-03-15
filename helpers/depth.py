@@ -90,7 +90,7 @@ class DepthModel():
     def load_midas(self, models_path, half_precision=True):
         if not os.path.exists(os.path.join(models_path, 'dpt_large-midas-2f21e586.pt')):
             print("..downloading dpt_large-midas-2f21e586.pt")
-            download_file("https://huggingface.co/deforum/MiDaS/resolve/main/dpt_large-midas-2f21e586.pt", models_path)
+            download_file("https://github.com/intel-isl/DPT/releases/download/1_0/dpt_large-midas-2f21e586.pt", models_path)
 
         self.midas_model = DPTDepthModel(
             path=os.path.join(models_path, "dpt_large-midas-2f21e586.pt"),
